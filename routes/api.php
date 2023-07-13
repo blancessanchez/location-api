@@ -2,9 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Resources\LocationResource;
 use App\Http\Controllers\LocationController;
-use App\Models\Location;
 
 /*
 |--------------------------------------------------------------------------
