@@ -13,11 +13,25 @@ class LocationController extends Controller
      */
     public function search(LocationSearchRequest $request)
     {
-        $latitude = $request->query('latitude');
-        $longitude = $request->query('longitude');
+        $searchLatitude = $request->query('latitude');
+        $searchLongitude = $request->query('longitude');
         $radius = $request->query('radius');
 
-        $data = Location::search($latitude, $longitude, $radius)->all();
+        $data = Location::select('id', 'name', 'latitude', 'longitude')
+            ->selectRaw("
+                (6371 *
+                    acos(
+                        cos(radians($searchLatitude))
+                        * cos(radians(latitude))
+                        * cos(
+                            radians(longitude) - radians($searchLongitude)
+                        ) + sin(radians($searchLatitude))
+                        * sin(radians(latitude))
+                    )
+                ) AS distance") // 6371km total Earth radius
+            ->havingRaw("distance <= $radius")
+            ->orderBy('distance')
+            ->get();
 
         return response()->json($data);
     }

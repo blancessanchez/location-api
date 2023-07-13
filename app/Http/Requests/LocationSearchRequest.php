@@ -24,7 +24,7 @@ class LocationSearchRequest extends FormRequest
         return [
             'latitude' => 'required|numeric',
             'longitude' => 'required|numeric',
-            'radius' => 'required',
+            'radius' => 'required|numeric',
         ];
     }
 }
