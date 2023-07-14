@@ -3,6 +3,10 @@
 
 This is a single restful API endpoint which should return Location points for a region on a map.
 
+## Tech Stack
+
+- Laravel 10
+- PHP 8
 
 ## Software needed
 
@@ -60,6 +64,10 @@ Postman: https://www.postman.com/downloads/
   - latitude: required and numeric
   - longitude: required and numeric
   - radius: required and numeric
+
+## Sample Input
+
+http://127.0.0.1:8000/api/v1/locations?latitude=51.475603934275675&longitude=-2.380716714519811&radius=6
 
 ## Sample Return
 
