@@ -6,8 +6,14 @@ use App\Models\Location;
 
 class LocationApi
 {
+    /**
+     * $apiKey variable
+     */
     protected $apiKey;
 
+    /**
+     * __construct function
+     */
     public function __construct($apiKey)
     {
         $this->apiKey = config('location.api_key');

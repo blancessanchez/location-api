@@ -14,6 +14,7 @@ class LocationApiServiceProvider extends ServiceProvider
     {
         $this->app->singleton(LocationApi::class, function ($app) {
             $apiKey = config('location.api_key');
+
             return new LocationApi($apiKey);
         });
     }
