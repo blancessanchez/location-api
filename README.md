@@ -65,6 +65,9 @@ Postman: https://www.postman.com/downloads/
   - longitude: required and numeric
   - radius: required and numeric
 
+**Add in the headers**:
+X-API-Key: <api-key-value>
+
 ## Sample Input
 
 http://127.0.0.1:8000/api/v1/locations?latitude=51.475603934275675&longitude=-2.380716714519811&radius=6
