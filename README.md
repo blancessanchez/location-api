@@ -1,5 +1,5 @@
 
-## Zap-Map Technical Challenge
+## Location Search Demo
 
 This is a single restful API endpoint which should return Location points for a region on a map.
 
