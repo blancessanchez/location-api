@@ -38,6 +38,11 @@ Postman: https://www.postman.com/downloads/
   DB_USERNAME=root
   DB_PASSWORD=
 ```
+- Go to the .env file, change the value for the api key
+
+```bash
+  LOCATION_API_KEY=abcd
+```
 
 - Start the server
 

@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('v1')->group(function() {
+Route::middleware('api.key')->prefix('v1')->group(function() {
     Route::get('/locations', [LocationController::class, 'search']);
 });
