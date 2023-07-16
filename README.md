@@ -32,6 +32,7 @@ Postman: https://www.postman.com/downloads/
 ```bash
   php artisan migrate --path=database/migrations/api
   php artisan db:seed
+  php artisan key:generate
 ```
 
 - Go to the .env file, change the following according to the credentials
@@ -66,7 +67,7 @@ Postman: https://www.postman.com/downloads/
   - radius: required and numeric
 
 **Add in the headers**:
-X-API-Key: <api-key-value>
+X-API-Key: abcd
 
 ## Sample Input
 
